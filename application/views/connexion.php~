@@ -1,0 +1,16 @@
+<?php echo form_open('welcome/connexion'); ?>
+
+<fieldset>
+<legend>Connexion</legend>
+
+<?php echo form_label('Login'); ?>
+<?php echo form_input(array('id' => 'login', 'name' => 'login')); ?>
+
+<?php echo form_label('Entrez votre mot de passe'); ?>
+<?php echo form_input(array('id' => 'pass', 'name' => 'pass', 'type' => 'password')); ?>
+
+<?php echo form_submit(array('id' => 'submit', 'value' => 'Valider')); ?>
+
+</fieldset>
+
+<?php echo form_close(); ?>

@@ -1,0 +1,15 @@
+<?php echo form_open(); ?>
+
+<?php echo form_label('Titre'); ?>
+<?php echo form_input(array('id' => 'title', 'name' => 'title', 'value' => $title)); ?>
+
+<?php echo form_label('Endroit'); ?>
+<?php echo form_input(array('id' => 'place', 'name' => 'place', 'value' => $place)); ?>
+
+<?php echo form_label('Description'); ?>
+<?php echo form_input(array('id' => 'str', 'name' => 'str', 'value' => $description)); ?>
+
+<?php echo form_submit(array('id' => 'edit', 'value' => 'Editer')); ?>
+<?php echo form_submit(array('id' => 'next', 'value' => 'Etape suivante')); ?>
+
+<?php echo form_close(); ?>

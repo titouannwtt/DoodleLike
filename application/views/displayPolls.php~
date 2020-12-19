@@ -1,0 +1,39 @@
+<table>
+	<tr>
+		<td> Sondages en cours </td>
+		<td> Titre </td>
+		<td> Endroit </td>
+		<td> Description </td>
+ </tr>
+	<?php foreach($polls as $poll) { ?>
+	<tr>
+		<?php if( $poll->over == false) { ?>
+		<td> <a href="<?php echo site_url("Welcome/displayListParticipants/".$login.'/'.$poll->idPoll.'/'.$poll->over); ?>" > <?php echo $poll->idPoll; ?>  </td>
+		<td> <?php echo $poll->title; ?> </td>
+		<td> <?php echo $poll->place; ?> </td>
+		<td> <?php echo $poll->description; ?> </td>
+		<?php } ?> 
+	</tr>
+<?php } ?>
+</table>
+		
+<table>
+	<tr>
+		<td> Sondages terminés </td>
+		<td> Titre </td>
+		<td> Endroit </td>
+		<td> Description </td>
+ </tr>
+	<?php foreach($polls as $poll) { ?>
+	<tr>
+		<?php if( $poll->over == true) { ?>
+		<td> <a href="<?php echo site_url("Welcome/displayListParticipants/".$login.'/'.$poll->idPoll.'/'.$poll->over); ?>" > <?php echo $poll->idPoll; ?>  </td>
+		<td> <?php echo $poll->title; ?> </td>
+		<td> <?php echo $poll->place; ?> </td>
+		<td> <?php echo $poll->description; ?> </td>
+		<?php } ?> 
+	</tr>
+<?php } ?>
+</table>
+		
+

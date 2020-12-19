@@ -1,0 +1,18 @@
+
+
+<table>
+	<tr>
+		<td> Participants </td>
+ </tr>
+	<?php foreach($participants as $participant) { ?>
+	<tr>
+		<td> <?php echo $participant->idUser; ?> </td>
+	</tr>
+<?php } ?>
+</table>
+<?php if($over == false) { ?>
+ <a href="<?php echo site_url("Welcome/closePoll/".$login.'/'.$poll); ?>" ><button type="submit" > Clôturer le sondage </button> </a> 
+ <a href="<?php echo site_url("Welcome/schedulePoll/".$login.'/'.$poll); ?>" ><button type="submit" > Modifier les dates </button> </a>  
+ <a href="<?php echo site_url("Welcome/addParticipant/".$login.'/'.$poll); ?>" ><button type="submit" > Ajouter des participants</button> </a>  
+ <?php } ?>
+ <a href="<?php echo site_url("Welcome/displayPolls/".$login); ?>" ><button type="submit" > Retour </button> </a>  

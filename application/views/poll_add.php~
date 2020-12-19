@@ -1,0 +1,20 @@
+<?php echo form_open("Welcome/addPoll/".$login.'/'.$idPoll); ?>
+
+<fieldset>
+<legend>Connexion</legend>
+
+<?php print($description); ?>
+<?php echo form_label('Titre'); ?>
+<?php echo form_input(array('id' => 'title', 'name' => 'title', 'value' => $title)); ?>
+
+<?php echo form_label('Endroit'); ?>
+<?php echo form_input(array('id' => 'place', 'name' => 'place', 'value' => $place)); ?>
+
+<?php echo form_label('Description'); ?>
+<?php echo form_input(array('id' => 'str', 'name' => 'str', 'value' => $description)); ?>
+
+<?php echo form_submit(array('id' => 'submit', 'value' => 'Valider')); ?>
+
+</fieldset>
+
+<?php echo form_close(); ?>

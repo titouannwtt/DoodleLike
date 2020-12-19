@@ -1,0 +1,47 @@
+<?php
+
+class Proposition extends CI_Model
+{
+	protected $table = 'Proposition';
+		protected function check($idPoll, $proposition)
+	{
+			$this->db->select('*');
+			$this->db->from($this->table);
+			$this->db->where('idPoll', $idPoll);
+			$this->db->where('proposition', $proposition);
+			$query = $this->db->get();
+			if($query->num_rows() == 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+	}	
+
+
+	public function Add($idPoll, $proposition)
+	{
+		if($this->check($idPoll, $proposition))
+		{
+	 		$this->db->set('idPoll', $idPoll)
+                    ->set('proposition',  $proposition)
+										->insert($this->table);
+		}
+	}
+	public function get($idPoll)
+	{
+		$this->db->select('*');
+		$this->db->from($this->table);
+		$this->db->where('idPoll', $idPoll);
+		return $this->db->get()->result();
+	}
+	public function remove($idPoll, $proposition)
+	{
+		$this->db->query("DELETE FROM $this->table WHERE idPoll = '".$idPoll."' and proposition ='".$proposition."'");
+	}
+
+
+
+}
