@@ -1,0 +1,12 @@
+DJADI Rabah
+WATTELET Titouan
+
+
+**URL du site**: [http://dwarves.iut-fbleau.fr/~djadi/PHP/CodeIgniter-3.1.8/](http://dwarves.iut-fbleau.fr/~djadi/PHP/CodeIgniter-3.1.8/)
+
+**Temps de travail:**
+    Entre 1 à 2 heures par jour sur 2 semaines, donc environs 20 heures par personnes.
+
+**Répartition des tâches:**
+    Nous nous sommes tous les deux chargés des diagrammes de classes et nous avons réfléchis ensemble sur le fonctionnement du site et de la base de données. Les controleurs ont ensuite été créer par Rabah, les vues par Titouan et le reste résume un travail commun.
+
